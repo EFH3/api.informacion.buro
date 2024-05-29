@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-configuration>
+   <session-factory>
+   
+      <property name = "hibernate.dialect">
+         <!-- org.hibernate.dialect.SQLServerDialect -->
+         org.hibernate.dialect.PostgreSQLDialect
+      </property>
+      
+      <property name = "hibernate.connection.driver_class">
+         <!-- com.microsoft.sqlserver.jdbc.SQLServerDriver -->
+         org.postgresql.Driver
+      </property>
+      
+      <property name = "hibernate.connection.url">
+         <!-- jdbc:sqlserver://10.44.4.155:1433;databaseName=prueba_orm -->
+         jdbc:postgresql://10.44.4.156:5432/prueba_orm
+      </property>
+      
+      <property name = "hibernate.connection.username">
+         sysorm
+      </property>
+      
+      <property name = "hibernate.connection.password">
+         7dc5c404c74dd885a7ef56cde74d34bb
+      </property>
+
+      <mapping class="com.coppel.entities.Empleados" />
+      <mapping class="com.coppel.entities.CancelacionEnvios" />
+      
+   </session-factory>
+</hibernate-configuration>
